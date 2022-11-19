@@ -33,14 +33,14 @@ public class Inventory_UI : MonoBehaviour
         if (!inventoryPanel.activeSelf)
         {
             inventoryPanel.SetActive(true);  //turn on the inventory make it visible to player
-            Setup();
+            Refresh();
         }
         else
         {
             inventoryPanel.SetActive(false);
         }
     }
-    void Setup()
+    void Refresh()
     {
         if(slots.Count== player.inventory.slots.Count) //check if inventory and inventory UI has the same number of slots
         {
@@ -58,43 +58,16 @@ public class Inventory_UI : MonoBehaviour
         }
     }
 
-    public  void SlotBeginDrag(Slot_UI slot)
+    public void Remove(int slotID)
     {
-        draggedSlot = slot;
-        draggedIcon = Instantiate(draggedSlot.itemIcon);
-        draggedIcon.transform.SetParent(canvas.transform);
-        draggedIcon.raycastTarget = false;
-        draggedIcon.rectTransform.sizeDelta = new Vector2(50f, 50f);
-
-        MoveToMousePosition(draggedIcon.gameObject);
-        Debug.Log("Start Drag: " + draggedSlot.name);
-    }
-
-    public void SlotDrag()
-    {
-        MoveToMousePosition(draggedIcon.gameObject);
-        Debug.Log("Dragging :" + draggedSlot.name);
-    }
-
-    public void SlotEndDrag()
-    {
-        Debug.Log("Done Dragging: " + draggedSlot.name);
-    }
-
-    public void SlotDrop(Slot_UI slot)
-    {
-        Debug.Log("Dropped " + draggedSlot.name + " on " + slot.name);
-    }
-
-    private void MoveToMousePosition(GameObject toMove)
-    {
-        if(canvas != null)
+        Collectable itemToDrop = GameManager.instance.itemManager.GetItemByType(player.inventory.slots[slotID].type);
+        if(itemToDrop != null)
         {
-            Vector2 position;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform,
-                Input.mousePosition, null, out position);
-
-            toMove.transform.position = canvas.transform.TransformPoint(position);
+            player.DropItem(itemToDrop);
+            player.inventory.Remove(slotID);
+            Refresh();
         }
     }
+
+    
 }

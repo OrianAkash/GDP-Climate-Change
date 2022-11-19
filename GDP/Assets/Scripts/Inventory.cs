@@ -26,7 +26,7 @@ public class Inventory
             {
                 return true; //if have space
             }
-            return false; //if not space
+            return false; //if no space
         }
 
         public void AddItem(Collectable item)
@@ -34,6 +34,20 @@ public class Inventory
             this.type = item.type;
             this.icon = item.icon;
             count++;
+        }
+
+        public void RemoveItem()
+        {
+            if (count > 0)
+            {
+                count--;
+
+                if(count == 0)
+                {
+                    icon = null;
+                    type = CollectableType.NONE;
+                }
+            }
         }
     }
 
@@ -68,4 +82,9 @@ public class Inventory
             }
         }
     } 
+
+    public void Remove(int index)
+    {
+        slots[index].RemoveItem();
+    }
 }
