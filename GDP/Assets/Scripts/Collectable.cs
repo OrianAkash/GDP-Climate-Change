@@ -4,29 +4,13 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    public CollectableType type;
-    public Sprite icon;
+    public int itemValue = 1;
 
-    public Rigidbody2D rb2d;
-
-    private void Awake()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        rb2d = GetComponent<Rigidbody2D>();
-    }
-
-    //player walk into collectable
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Player player = collision.GetComponent<Player>(); //check if collider which enters the collectables trigger is the player
-
-        if (player)
+        if (other.gameObject.CompareTag("Player"))
         {
-            player.inventory.Add(this); //add the number of collectables to the player
-            Destroy(this.gameObject); //remove the collectables from the scene once collected
+            Collected.instance.ChangeCollect(itemValue);
         }
     }
-}
-public enum CollectableType
-{
-    NONE, TREE_SEEDS
 }

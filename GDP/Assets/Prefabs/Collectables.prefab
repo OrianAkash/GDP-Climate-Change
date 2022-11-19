@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1807042873400938171}
   - component: {fileID: 1807042873400938172}
   - component: {fileID: 6946142318069165711}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collectables
-  m_TagString: Untagged
+  m_TagString: Trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -125,9 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c661a581c3cd347a3e301e9dec26e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  icon: {fileID: 0}
-  rb2d: {fileID: 0}
+  dialog:
+    lines: []
+  itemValue: 1
 --- !u!50 &6946142318069165711
 Rigidbody2D:
   serializedVersion: 4

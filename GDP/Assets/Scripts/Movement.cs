@@ -55,4 +55,13 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
             grounded = true;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Trash"))
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Convo");
+        }
+    }
 }
