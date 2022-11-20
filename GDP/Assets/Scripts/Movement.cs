@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     public float jumpRate = 2f;
     float nextjumpTime = 0f;
     public bool grounded;
-
+    private bool interacting;
 
     private void Awake()
     {
@@ -21,27 +21,33 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
-
-        if (horizontalInput > 0.01f)
-            transform.localScale = new Vector3(1, 1, 1);
-        else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-1, 1, 1);
-
-
-
-        if (Time.time >= nextjumpTime)
+        if(!interacting)
         {
-            if (Input.GetKey(KeyCode.Space) && grounded)
+            float horizontalInput = Input.GetAxis("Horizontal");
+            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+
+            if (horizontalInput > 0.01f)
+                transform.localScale = new Vector3(1, 1, 1);
+            else if (horizontalInput < -0.01f)
+                transform.localScale = new Vector3(-1, 1, 1);
+
+
+
+            if (Time.time >= nextjumpTime)
             {
-                Jump();
-                nextjumpTime = Time.time + 6f / jumpRate;
+                if (Input.GetKey(KeyCode.Space) && grounded)
+                {
+                    Jump();
+                    nextjumpTime = Time.time + 6f / jumpRate;
+                }
+
+
             }
-
-
         }
-
+    }
+    public void ToggleInteraction()
+    {
+        interacting = !interacting;
     }
 
     private void Jump()
@@ -61,7 +67,7 @@ public class Movement : MonoBehaviour
         if (other.gameObject.CompareTag("Trash"))
         {
             Destroy(other.gameObject);
-            Debug.Log("Convo");
+            //Debug.Log("Convo");
         }
     }
 }
