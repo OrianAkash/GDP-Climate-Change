@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Trash"))
+        if (other.gameObject.CompareTag("Collectables"))
         {
             Destroy(other.gameObject);
             //Debug.Log("Convo");
