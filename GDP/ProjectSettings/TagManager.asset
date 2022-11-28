@@ -9,6 +9,7 @@ TagManager:
   - StopTimer
   - Trash
   - Seed
+  - PlantArea
   layers:
   - Default
   - TransparentFX

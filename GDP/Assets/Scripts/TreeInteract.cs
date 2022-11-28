@@ -8,11 +8,18 @@ public class TreeInteract : CollidableObjects
     public GameObject seeds;
     public Vector3 newPosition;
     public Quaternion newRotation;
+    [SerializeField] private DialougeManager dialougeManager;
+    private bool triggered;
     protected override void OnCollided(GameObject collidedObject)
     {
         if (Input.GetKey(KeyCode.E))
         {
             OnInteract();
+            if (collidedObject.CompareTag("Player") && !triggered)
+            {
+                dialougeManager.TriggerStartDialouge();
+                triggered = true;
+            }
         }
     }
 
