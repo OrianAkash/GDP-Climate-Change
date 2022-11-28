@@ -2221,7 +2221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1807042873400938173, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
       propertyPath: m_TagString
-      value: Collectables
+      value: Trash
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
@@ -2559,7 +2559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1807042873400938173, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
       propertyPath: m_TagString
-      value: Collectables
+      value: Trash
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}

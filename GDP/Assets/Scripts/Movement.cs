@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     float nextjumpTime = 0f;
     public bool grounded;
     private bool interacting;
+    public GameObject plantArea1;
 
     private void Awake()
     {
@@ -64,10 +65,15 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Collectables"))
+        if (other.gameObject.CompareTag("Trash"))
         {
             Destroy(other.gameObject);
             //Debug.Log("Convo");
+        }
+        if (other.gameObject.CompareTag("Seed"))
+        {
+            Destroy(other.gameObject);
+            plantArea1.SetActive(true);
         }
     }
 }
