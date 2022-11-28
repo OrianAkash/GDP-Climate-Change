@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     float nextjumpTime = 0f;
     public bool grounded;
     private bool interacting;
-    public GameObject[] plantArea;
+    public GameObject[] plantArea = new GameObject[3];
 
     private void Awake()
     {
@@ -73,11 +73,7 @@ public class Movement : MonoBehaviour
         if (other.gameObject.CompareTag("Seed"))
         {
             Destroy(other.gameObject);
-            for(int i = 0; i < plantArea.Length;)
-            {
-                plantArea[i].SetActive(true);
-            }
-            //plantArea[Random.Range(0, plantArea.Length)].SetActive(true);
+            plantArea[Random.Range(0, plantArea.Length)].SetActive(true);
         }
         if (other.gameObject.CompareTag("PlantArea"))
         {
