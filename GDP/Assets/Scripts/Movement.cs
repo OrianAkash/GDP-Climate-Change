@@ -65,10 +65,17 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Trash"))
+        if (other.gameObject.CompareTag("Plastic"))
         {
             Destroy(other.gameObject);
-            //Debug.Log("Convo");
+        }
+        if (other.gameObject.CompareTag("Metal"))
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("Paper"))
+        {
+            Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("Seed"))
         {
