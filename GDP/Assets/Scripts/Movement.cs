@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     public bool grounded;
     private bool interacting;
     public GameObject[] plantArea = new GameObject[3];
+    public GameObject[] inventory = new GameObject[1];
 
     private void Awake()
     {
@@ -67,6 +68,7 @@ public class Movement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Plastic"))
         {
+            inventory[0] = other.gameObject;
             Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("Metal"))
@@ -84,9 +86,7 @@ public class Movement : MonoBehaviour
         }
         if (other.gameObject.CompareTag("PlantArea"))
         {
-            Destroy(other.gameObject);
-            
-            
+            Destroy(other.gameObject);   
         }
     }
 }
