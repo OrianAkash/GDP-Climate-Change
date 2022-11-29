@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753b6a02e0da7cc4caa959a67805303f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.01
+  typingSpeed: 0.008
   npcDialougeText: {fileID: 1486957595}
   npcDialougeSentences:
   - Collect the seed and plant it at the highlighted area
@@ -2948,7 +2948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753b6a02e0da7cc4caa959a67805303f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.01
+  typingSpeed: 0.008
   npcDialougeText: {fileID: 705848750}
   npcDialougeSentences:
   - Thanks for helping me plant a tree!
