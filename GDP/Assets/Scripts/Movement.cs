@@ -28,9 +28,9 @@ public class Movement : MonoBehaviour
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
             if (horizontalInput > 0.01f)
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
             else if (horizontalInput < -0.01f)
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-0.15f, 0.15f, 0.15f);
 
 
 
