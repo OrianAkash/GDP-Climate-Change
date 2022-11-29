@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     float nextjumpTime = 0f;
     public bool grounded;
     private bool interacting;
+    public bool inventryfill = false;
     public GameObject[] plantArea = new GameObject[3];
     public string inventory;
 
@@ -68,15 +69,20 @@ public class Movement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Plastic"))
         {
+            inventryfill = true;
             inventory = other.transform.tag;
             Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("Metal"))
         {
+            inventryfill = true;
+            inventory = other.transform.tag;
             Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("Paper"))
         {
+            inventryfill = true;
+            inventory = other.transform.tag;
             Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("Seed"))
