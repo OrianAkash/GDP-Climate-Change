@@ -2528,7 +2528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753b6a02e0da7cc4caa959a67805303f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.01
+  typingSpeed: 0.008
   npcDialougeText: {fileID: 1591747618}
   npcDialougeSentences:
   - Did you know...
@@ -9440,7 +9440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753b6a02e0da7cc4caa959a67805303f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.01
+  typingSpeed: 0.008
   npcDialougeText: {fileID: 1134396805}
   npcDialougeSentences:
   - Here are two sustainable ways you can reduce waste in Singapore
