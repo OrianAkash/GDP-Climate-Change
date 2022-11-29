@@ -2582,6 +2582,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialougeManager: {fileID: 753111476}
+--- !u!114 &858571621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858571605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a230d512124ad4e9c5f9baabb39d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.2
+  frequency: 1
 --- !u!1 &915287489
 GameObject:
   m_ObjectHideFlags: 0
@@ -9187,7 +9201,10 @@ MonoBehaviour:
   jump_height: 12
   jumpRate: 5
   grounded: 0
-  plantArea1: {fileID: 0}
+  plantArea:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1085838077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9245,6 +9262,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemValue: 1
+--- !u!114 &1121714127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121714120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a230d512124ad4e9c5f9baabb39d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.2
+  frequency: 1
 --- !u!1 &1134396802
 GameObject:
   m_ObjectHideFlags: 0
@@ -10510,6 +10541,14 @@ PrefabInstance:
     - target: {fileID: 1807042873400938171, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807042873400938171, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.46875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807042873400938171, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.40625
       objectReference: {fileID: 0}
     - target: {fileID: 1807042873400938173, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
       propertyPath: m_Name

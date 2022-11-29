@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8047431503997147468}
   - component: {fileID: 8326080085906803990}
   - component: {fileID: 5857946860249149473}
+  - component: {fileID: -6604399174986203286}
   m_Layer: 0
   m_Name: pfSeeds
   m_TagString: Seed
@@ -160,6 +161,22 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  Interacted: 0
   seeds: {fileID: 3572496330437448978}
   newPosition: {x: 0, y: 0, z: 0}
   newRotation: {x: 0, y: 0, z: 0, w: 0}
+  dialougeManager: {fileID: 0}
+--- !u!114 &-6604399174986203286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3572496330437448978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a230d512124ad4e9c5f9baabb39d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.2
+  frequency: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TreeInteract : CollidableObjects
 {
-    private bool Interacted = false;
+    public bool Interacted = false;
     public GameObject seeds;
     public Vector3 newPosition;
     public Quaternion newRotation;
@@ -31,6 +31,7 @@ public class TreeInteract : CollidableObjects
             Debug.Log("Drop seed");
             Instantiate(seeds, newPosition, newRotation );
         }
+
     }
 
 }
