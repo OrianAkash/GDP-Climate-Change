@@ -10227,11 +10227,11 @@ PrefabInstance:
       objectReference: {fileID: -1775750756, guid: 7679d0c0b54c9654e952d9336ab571e3, type: 3}
     - target: {fileID: 1807042873400938173, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
       propertyPath: m_Name
-      value: Trash 2
+      value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: 1807042873400938173, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
       propertyPath: m_TagString
-      value: Trash
+      value: Metal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
@@ -10573,7 +10573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1807042873400938173, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
       propertyPath: m_Name
-      value: Trash 1
+      value: Plastic
       objectReference: {fileID: 0}
     - target: {fileID: 1807042873400938173, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
       propertyPath: m_Layer
@@ -10581,7 +10581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1807042873400938173, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
       propertyPath: m_TagString
-      value: Trash
+      value: Plastic
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dcabb6e168c745428a67ab54af35c72, type: 3}
