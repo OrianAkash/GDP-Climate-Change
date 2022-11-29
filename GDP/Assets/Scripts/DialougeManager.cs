@@ -5,7 +5,7 @@ using TMPro;
 
 public class DialougeManager : MonoBehaviour
 {
-    [SerializeField] private float typingSpeed = 0.05f;
+    [SerializeField] private float typingSpeed = 0.008f;
 
     [SerializeField] private TextMeshProUGUI npcDialougeText;
     [SerializeField] private string[] npcDialougeSentences;
