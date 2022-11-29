@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class PlasticBin : MonoBehaviour
 {
+    public Movement trashtype = new Movement();
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Plastic"))
+        if(other.transform.tag=="Player")
         {
-            Destroy(other.gameObject);
+            if(trashtype.inventory == "Plastic")
+            {
+                Debug.Log("Correct");
+                trashtype.inventory = null;
+            }
+            else
+            {
+                Debug.Log("Wrong");
+                trashtype.inventory = null;
+            }
         }
+        
     }
 }
