@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MetalBin : MonoBehaviour
 {
+    public Health healthbar;
     public Movement trashtype = new Movement();
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,6 +21,7 @@ public class MetalBin : MonoBehaviour
                 Debug.Log("Wrong");
                 trashtype.inventory = null;
                 trashtype.inventryfill = false;
+                healthbar.TakeDamage(1);
             }
         }
     }
