@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MetalBin : MonoBehaviour
+public class PaperBin : MonoBehaviour
 {
     public Health healthbar;
     public Movement trashtype = new Movement();
@@ -11,7 +11,7 @@ public class MetalBin : MonoBehaviour
     {
         if (other.transform.tag == "Player" && trashtype.inventryfill == true)
         {
-            if (trashtype.inventory == "Metal")
+            if (trashtype.inventory == "Paper")
             {
                 Debug.Log("Correct");
                 trashtype.inventory = null;

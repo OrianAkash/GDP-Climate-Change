@@ -6,6 +6,7 @@ public class PlasticBin : MonoBehaviour
 {
     public Health healthbar;
     public Movement trashtype = new Movement();
+    public int itemValue = 1;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.transform.tag=="Player" && trashtype.inventryfill == true)
@@ -15,6 +16,7 @@ public class PlasticBin : MonoBehaviour
                 Debug.Log("Correct");
                 trashtype.inventory = null;
                 trashtype.inventryfill = false;
+                Collected.instance.ChangeCollect(itemValue);
             }
             else
             {
