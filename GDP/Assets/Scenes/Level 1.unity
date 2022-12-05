@@ -12127,6 +12127,7 @@ MonoBehaviour:
   - {fileID: 0}
   inventory: 
   inventext: {fileID: 1483664552}
+  playerAnim: {fileID: 1085838078}
 --- !u!61 &1085838077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12163,7 +12164,7 @@ Animator:
   m_GameObject: {fileID: 1085838071}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d9be702ec629dc1448605f34924b6bdb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 770cc792b665def45b5056c5ded9c46b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
