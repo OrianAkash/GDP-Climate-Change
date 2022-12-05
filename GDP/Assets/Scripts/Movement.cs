@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Movement : MonoBehaviour
 {
@@ -15,10 +17,12 @@ public class Movement : MonoBehaviour
     public bool inventryfill = false;
     public GameObject[] plantArea = new GameObject[3];
     public string inventory;
+    public TextMeshProUGUI inventext;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        inventext.text = null;
         //anim = GetComponent<Animator>();
     }
 
@@ -71,18 +75,21 @@ public class Movement : MonoBehaviour
         {
             inventryfill = true;
             inventory = other.transform.tag;
+            inventext.text = inventory;
             Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("Metal"))
         {
             inventryfill = true;
             inventory = other.transform.tag;
+            inventext.text = inventory;
             Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("Paper"))
         {
             inventryfill = true;
             inventory = other.transform.tag;
+            inventext.text = inventory;
             Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("Seed"))

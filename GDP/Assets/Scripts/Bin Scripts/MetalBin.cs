@@ -15,6 +15,7 @@ public class MetalBin : MonoBehaviour
             {
                 Debug.Log("Correct");
                 trashtype.inventory = null;
+                trashtype.inventext.text = null;
                 trashtype.inventryfill = false;
                 Collected.instance.ChangeCollect(itemValue);
             }
@@ -22,6 +23,7 @@ public class MetalBin : MonoBehaviour
             {
                 Debug.Log("Wrong");
                 trashtype.inventory = null;
+                trashtype.inventext.text = null;
                 trashtype.inventryfill = false;
                 healthbar.TakeDamage(1);
             }
