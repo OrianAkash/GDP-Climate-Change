@@ -96,21 +96,21 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Plastic"))
+        if (inventryfill == false && other.gameObject.CompareTag("Plastic"))
         {
             inventryfill = true;
             inventory = other.transform.tag;
             inventext.text = inventory;
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("Metal"))
+        if (inventryfill == false && other.gameObject.CompareTag("Metal"))
         {
             inventryfill = true;
             inventory = other.transform.tag;
             inventext.text = inventory;
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("Paper"))
+        if (inventryfill == false && other.gameObject.CompareTag("Paper"))
         {
             inventryfill = true;
             inventory = other.transform.tag;
