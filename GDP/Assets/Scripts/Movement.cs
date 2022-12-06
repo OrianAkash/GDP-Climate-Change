@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public float speed;
     public float jump_height;
     private Rigidbody2D body;
+    private float horizontalInput = 0f;
     public float jumpRate = 2f;
     float nextjumpTime = 0f;
     public bool grounded;
@@ -18,53 +19,64 @@ public class Movement : MonoBehaviour
     public string inventory;
     public TextMeshProUGUI inventext;
     public Animator playerAnim;
+    private SpriteRenderer sprite;
+
+    private enum MoveState {idle, running, jumping };
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         inventext.text = null;
         playerAnim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
 
     }
 
     private void Update()
     {
 
-        if (Input.GetButtonDown("Horizontal") || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-        {
-            playerAnim.Play("Run");
-        }
-        else if (Input.GetButtonUp("Horizontal") || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-        {
-            playerAnim.Play("Idle");
-        }
-
-
-
+       
         if (!interacting)
         {
-            float horizontalInput = Input.GetAxis("Horizontal");
+            horizontalInput = Input.GetAxis("Horizontal");
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
-
-            if (horizontalInput > 0.01f)
-                transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
-            else if (horizontalInput < -0.01f)
-                transform.localScale = new Vector3(-0.15f, 0.15f, 0.15f);
-
-            
-
-
 
             if (Time.time >= nextjumpTime)
             {
                 if (Input.GetKey(KeyCode.Space) && grounded)
                 {
-                    Jump();
-                    playerAnim.Play("Jump");         
+                    Jump();         
                     nextjumpTime = Time.time + 6f / jumpRate;
                 }
 
             }
         }
+        UpdateAnim();
+    }
+
+    private void UpdateAnim()
+    {
+        MoveState state;
+
+        if(horizontalInput > 0f)
+        {
+            state = MoveState.running;
+            sprite.flipX = false; 
+        }
+        else if (horizontalInput < 0f)
+        {
+            state = MoveState.running;
+            sprite.flipX = true; 
+        }
+        else
+        {
+            state = MoveState.idle;
+        }
+
+        if (body.velocity.y > .1f)
+        {
+            state = MoveState.jumping;
+        }
+        playerAnim.SetInteger("state", (int)state);
     }
     public void ToggleInteraction()
     {
