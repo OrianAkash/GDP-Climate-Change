@@ -33,6 +33,10 @@ public class Movement : MonoBehaviour
         {
             playerAnim.Play("Run");
         }
+        else if (Input.GetButtonUp("Horizontal") || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            playerAnim.Play("Idle");
+        }
 
 
 
@@ -58,6 +62,7 @@ public class Movement : MonoBehaviour
                     playerAnim.Play("Jump");         
                     nextjumpTime = Time.time + 6f / jumpRate;
                 }
+
             }
         }
     }
