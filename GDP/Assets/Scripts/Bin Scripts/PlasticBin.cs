@@ -7,6 +7,9 @@ public class PlasticBin : MonoBehaviour
     public Health healthbar;
     public Movement trashtype = new Movement();
     public int itemValue = 1;
+    [SerializeField] private DialougeManager dialougeManager;
+    public bool triggered;
+    public GameObject[] pestBox;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.transform.tag=="Player" && trashtype.inventryfill == true)
@@ -18,6 +21,11 @@ public class PlasticBin : MonoBehaviour
                 trashtype.inventext.text = null;
                 trashtype.inventryfill = false;
                 Collected.instance.ChangeCollect(itemValue);
+                if (triggered == false)
+                {
+                    dialougeManager.TriggerStartDialouge();
+                    triggered = true;
+                }
             }
             else
             {
@@ -26,6 +34,7 @@ public class PlasticBin : MonoBehaviour
                 trashtype.inventext.text = null;
                 trashtype.inventryfill = false;
                 healthbar.TakeDamage(1);
+                pestBox[Random.Range(0, pestBox.Length)].SetActive(true);
             }
         }       
     }
