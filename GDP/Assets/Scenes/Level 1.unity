@@ -4284,6 +4284,7 @@ GameObject:
   - component: {fileID: 346781464}
   - component: {fileID: 346781466}
   - component: {fileID: 346781465}
+  - component: {fileID: 346781467}
   m_Layer: 0
   m_Name: Pest Box (9)
   m_TagString: Untagged
@@ -4384,6 +4385,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &346781467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346781463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &408055904
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,6 +4508,7 @@ GameObject:
   - component: {fileID: 445055035}
   - component: {fileID: 445055037}
   - component: {fileID: 445055036}
+  - component: {fileID: 445055038}
   m_Layer: 0
   m_Name: Pest Box (8)
   m_TagString: Untagged
@@ -4594,6 +4609,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &445055038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445055034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &501739244
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,6 +4633,7 @@ GameObject:
   - component: {fileID: 501739245}
   - component: {fileID: 501739247}
   - component: {fileID: 501739246}
+  - component: {fileID: 501739248}
   m_Layer: 0
   m_Name: Pest Box (5)
   m_TagString: Untagged
@@ -4705,6 +4734,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &501739248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501739244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -12567,6 +12609,7 @@ GameObject:
   - component: {fileID: 1061399483}
   - component: {fileID: 1061399485}
   - component: {fileID: 1061399484}
+  - component: {fileID: 1061399486}
   m_Layer: 0
   m_Name: Pest Box (4)
   m_TagString: Untagged
@@ -12667,6 +12710,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1061399486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061399482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &1076208762
 GameObject:
   m_ObjectHideFlags: 0
@@ -13034,6 +13090,7 @@ GameObject:
   - component: {fileID: 1132460107}
   - component: {fileID: 1132460106}
   - component: {fileID: 1132460105}
+  - component: {fileID: 1132460108}
   m_Layer: 0
   m_Name: Pest Box
   m_TagString: Untagged
@@ -13134,6 +13191,19 @@ Transform:
   m_Father: {fileID: 1039420968}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1132460108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132460104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &1134396802
 GameObject:
   m_ObjectHideFlags: 0
@@ -13554,6 +13624,7 @@ GameObject:
   - component: {fileID: 1294058135}
   - component: {fileID: 1294058137}
   - component: {fileID: 1294058136}
+  - component: {fileID: 1294058138}
   m_Layer: 0
   m_Name: Pest Box (7)
   m_TagString: Untagged
@@ -13654,6 +13725,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1294058138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294058134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &1325853678
 GameObject:
   m_ObjectHideFlags: 0
@@ -13948,6 +14032,7 @@ GameObject:
   - component: {fileID: 1387997284}
   - component: {fileID: 1387997286}
   - component: {fileID: 1387997285}
+  - component: {fileID: 1387997287}
   m_Layer: 0
   m_Name: Pest Box (6)
   m_TagString: Untagged
@@ -14048,6 +14133,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1387997287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387997283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &1390909549
 GameObject:
   m_ObjectHideFlags: 0
@@ -14347,6 +14445,7 @@ GameObject:
   - component: {fileID: 1433677050}
   - component: {fileID: 1433677052}
   - component: {fileID: 1433677051}
+  - component: {fileID: 1433677053}
   m_Layer: 0
   m_Name: Pest Box (1)
   m_TagString: Untagged
@@ -14447,6 +14546,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1433677053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433677049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &1460364362
 GameObject:
   m_ObjectHideFlags: 0
@@ -15609,6 +15721,7 @@ GameObject:
   - component: {fileID: 2001091700}
   - component: {fileID: 2001091702}
   - component: {fileID: 2001091701}
+  - component: {fileID: 2001091703}
   m_Layer: 0
   m_Name: Pest Box (2)
   m_TagString: Untagged
@@ -15709,6 +15822,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2001091703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001091699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &2092301238
 GameObject:
   m_ObjectHideFlags: 0
@@ -15720,6 +15846,7 @@ GameObject:
   - component: {fileID: 2092301239}
   - component: {fileID: 2092301241}
   - component: {fileID: 2092301240}
+  - component: {fileID: 2092301242}
   m_Layer: 0
   m_Name: Pest Box (3)
   m_TagString: Untagged
@@ -15820,6 +15947,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2092301242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092301238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266821bf41120747bba3444ec74bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1085838079}
 --- !u!1 &2113378083
 GameObject:
   m_ObjectHideFlags: 0
