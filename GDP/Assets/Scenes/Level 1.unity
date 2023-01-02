@@ -4651,17 +4651,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900c283b22113b24294073637dc2b67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToRemove: []
   winningScreen: {fileID: 727600349}
-  totalObjects: 0
-  objectsCollected: 0
-  objects:
-  - {fileID: 7824111948731964571}
-  - {fileID: 1807042872906452733}
-  - {fileID: 3815577707948609109}
-  - {fileID: 1325853678}
-  - {fileID: 1076208762}
-  - {fileID: 1683749668}
-  - {fileID: 1134726684}
+  health: {fileID: 1085838079}
 --- !u!4 &454471903
 Transform:
   m_ObjectHideFlags: 0
@@ -5913,7 +5905,17 @@ MonoBehaviour:
   itemValue: 1
   dialougeManager: {fileID: 200591220}
   triggered: 0
-  pestBox: []
+  pestBox:
+  - {fileID: 1132460104}
+  - {fileID: 1433677049}
+  - {fileID: 2001091699}
+  - {fileID: 2092301238}
+  - {fileID: 1061399482}
+  - {fileID: 501739244}
+  - {fileID: 1387997283}
+  - {fileID: 1294058134}
+  - {fileID: 445055034}
+  - {fileID: 346781463}
 --- !u!61 &815999436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14796,8 +14798,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1968851108}
-  NumberOfRubbishInTheScene: 7
-  winningScreen: {fileID: 727600349}
 --- !u!4 &1476259996
 Transform:
   m_ObjectHideFlags: 0

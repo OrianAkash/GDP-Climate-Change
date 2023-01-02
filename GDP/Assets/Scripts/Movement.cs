@@ -124,7 +124,7 @@ public class Movement : MonoBehaviour
         }
         if (other.gameObject.CompareTag("PlantArea"))
         {
-            Destroy(other.gameObject);   
+            Destroy(other.gameObject);
         }
     }
 }

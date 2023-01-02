@@ -4,27 +4,15 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
+    public List<GameObject> objectsToRemove;
     public GameObject winningScreen;
-    public int totalObjects;
-    public int objectsCollected;
-    public  GameObject[] objects;
-
-    void Start()
-    {
-        
-        totalObjects = objects.Length;
-    }
+    [SerializeField] private Health health;
 
     void Update()
     {
-        if (objectsCollected == totalObjects)
+        if (objectsToRemove.Count == 0 && health.currentHealth > 0)
         {
             winningScreen.SetActive(true);
         }
-    }
-
-    public void CollectCoin()
-    {
-        objectsCollected++;
     }
 }
