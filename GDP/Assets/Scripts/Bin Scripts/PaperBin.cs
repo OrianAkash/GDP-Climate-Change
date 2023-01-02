@@ -33,6 +33,7 @@ public class PaperBin : MonoBehaviour
                 trashtype.inventory = null;
                 trashtype.inventext.text = null;
                 trashtype.inventryfill = false;
+                healthbar.TakeDamage(1);
                 pestBox[Random.Range(0, pestBox.Length)].SetActive(true);
 
             }

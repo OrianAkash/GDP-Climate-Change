@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -19,9 +20,9 @@ public class Health : MonoBehaviour
         {
 
         }
-        else
+        else if(currentHealth <=0)
         {
-
+            SceneManager.LoadScene(1);
         }
     }
     // Update is called once per frame
