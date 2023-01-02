@@ -8,6 +8,8 @@ public class Collected : MonoBehaviour
     public static Collected instance;
     public TextMeshProUGUI text;
     int collect;
+    public int NumberOfRubbishInTheScene;
+    public GameObject winningScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +23,13 @@ public class Collected : MonoBehaviour
     {
         collect += itemValue;
         text.text = collect.ToString();
+    }
+
+    void Update()
+    {
+        if (text.text == NumberOfRubbishInTheScene.ToString())
+        {
+            winningScreen.SetActive(true);
+        }
     }
 }
