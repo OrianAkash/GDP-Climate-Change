@@ -10,7 +10,7 @@ public class Collectable : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Collected.instance.ChangeCollect(itemValue);
+            //Collected.instance.ChangeCollect(itemValue);
         }
     }
 }

@@ -7,7 +7,8 @@ public class Collected : MonoBehaviour
 {
     public static Collected instance;
     public TextMeshProUGUI text;
-    int collectCorrect;
+    public int collectCorrect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,6 @@ public class Collected : MonoBehaviour
         collectCorrect += itemValue;
         text.text = collectCorrect.ToString();
     }
+    
 
 }

@@ -21,7 +21,8 @@ public class MetalBin : MonoBehaviour
                 trashtype.inventext.text = null;
                 trashtype.inventryfill = false;
                 Collected.instance.ChangeCollect(itemValue);
-                if(triggered == false)
+                Win.instance.TotalCollect(itemValue);
+                if (triggered == false)
                 {
                     dialougeManager.TriggerStartDialouge();
                     triggered = true;
@@ -34,6 +35,7 @@ public class MetalBin : MonoBehaviour
                 trashtype.inventext.text = null;
                 trashtype.inventryfill = false;
                 healthbar.TakeDamage(1);
+                Win.instance.TotalCollect(itemValue);
                 pestBox[Random.Range(0, pestBox.Length)].SetActive(true);
             }
         }

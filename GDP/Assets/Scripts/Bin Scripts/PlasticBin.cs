@@ -21,6 +21,7 @@ public class PlasticBin : MonoBehaviour
                 trashtype.inventext.text = null;
                 trashtype.inventryfill = false;
                 Collected.instance.ChangeCollect(itemValue);
+                Win.instance.TotalCollect(itemValue);
                 if (triggered == false)
                 {
                     dialougeManager.TriggerStartDialouge();
@@ -34,6 +35,7 @@ public class PlasticBin : MonoBehaviour
                 trashtype.inventext.text = null;
                 trashtype.inventryfill = false;
                 healthbar.TakeDamage(1);
+                Win.instance.TotalCollect(itemValue);
                 pestBox[Random.Range(0, pestBox.Length)].SetActive(true);
             }
         }       

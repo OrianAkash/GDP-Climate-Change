@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
     public TextMeshProUGUI inventext;
     public Animator playerAnim;
     private SpriteRenderer sprite;
+    int itemValue = 1;
 
     private enum MoveState {idle, running, jumping };
     private void Awake()

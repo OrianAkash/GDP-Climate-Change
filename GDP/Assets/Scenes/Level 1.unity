@@ -15877,9 +15877,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900c283b22113b24294073637dc2b67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsToRemove: []
   winningScreen: {fileID: 727600349}
   health: {fileID: 1085838079}
+  totalCollect: 0
 --- !u!4 &454471903
 Transform:
   m_ObjectHideFlags: 0
@@ -26121,6 +26121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1968851108}
+  collectCorrect: 0
 --- !u!4 &1476259996
 Transform:
   m_ObjectHideFlags: 0
