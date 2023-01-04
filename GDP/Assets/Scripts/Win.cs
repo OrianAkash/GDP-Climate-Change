@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Win : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Win : MonoBehaviour
     public GameObject winningScreen;
     [SerializeField] private Health health;
     public int totalCollect;
+    public Collected collect;
+    public TextMeshProUGUI displayScore;
 
     void Start()
     {
@@ -23,6 +26,8 @@ public class Win : MonoBehaviour
         {
             winningScreen.SetActive(true);
         }
+
+        displayScore.text = "Score "+ (collect.collectCorrect*15);
     }
     public void TotalCollect(int itemValue)
     {
