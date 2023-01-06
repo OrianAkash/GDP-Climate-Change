@@ -8,10 +8,14 @@ public class Win : MonoBehaviour
     public static Win instance;
     //public List<GameObject> objectsToRemove;
     public GameObject winningScreen;
+    public GameObject correctScreen;
+    public GameObject wrongScreen;
     [SerializeField] private Health health;
     public int totalCollect;
     public Collected collect;
     public TextMeshProUGUI displayScore;
+    public TextMeshProUGUI correctScore;
+    public TextMeshProUGUI wrongScore;
 
     void Start()
     {
@@ -33,4 +37,20 @@ public class Win : MonoBehaviour
     {
         totalCollect += itemValue;
     }
+
+    public void CorrectAnswer()
+    {
+        winningScreen.SetActive(false);
+        correctScore.text = "Score "+(collect.collectCorrect * 15) * 2;
+        correctScreen.SetActive(true);
+    }
+
+    public void WrongAnswer()
+    {
+        winningScreen.SetActive(false);
+        wrongScore.text = "Score " + (collect.collectCorrect*15);
+        wrongScreen.SetActive(true);
+    }
+
+
 }
