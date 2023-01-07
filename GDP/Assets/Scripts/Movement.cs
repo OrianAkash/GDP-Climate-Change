@@ -22,6 +22,11 @@ public class Movement : MonoBehaviour
     private SpriteRenderer sprite;
     int itemValue = 1;
 
+    private bool moveLeft;
+    private bool moveRight;
+    private float horizontalMove;
+
+
     private enum MoveState {idle, running, jumping };
     private void Awake()
     {
@@ -29,41 +34,67 @@ public class Movement : MonoBehaviour
         inventext.text = null;
         playerAnim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-
+        moveLeft = false;
+        moveRight = false;
     }
 
+    public void PointerDownLeft()
+    {
+        moveLeft = true;
+    }
+
+    public void PointerUpLeft()
+    {
+        moveLeft = false;
+    }
+
+    public void PointerDownRight()
+    {
+        moveRight = true;
+    }
+
+    public void PointerUpRight()
+    {
+        moveRight = false;
+    }
     private void Update()
     {
-
-       
         if (!interacting)
         {
-            horizontalInput = Input.GetAxis("Horizontal");
-            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
-
-            if (Time.time >= nextjumpTime)
-            {
-                if (Input.GetKey(KeyCode.Space) && grounded)
-                {
-                    Jump();         
-                    nextjumpTime = Time.time + 6f / jumpRate;
-                }
-
-            }
+            MovePlayer();
         }
         UpdateAnim();
+    }
+    private void MovePlayer()
+    {
+        if (moveLeft)
+        {
+            horizontalMove = -speed;
+        }
+        else if (moveRight)
+        {
+            horizontalMove = speed;
+        }
+        else
+        {
+            horizontalMove = 0;
+        }
+    }
+    public void FixedUpdate()
+    {
+        body.velocity = new Vector2(horizontalMove, body.velocity.y);
     }
 
     private void UpdateAnim()
     {
         MoveState state;
 
-        if(horizontalInput > 0f)
+        if(horizontalMove > 0f)
         {
             state = MoveState.running;
             sprite.flipX = false; 
         }
-        else if (horizontalInput < 0f)
+        else if (horizontalMove < 0f)
         {
             state = MoveState.running;
             sprite.flipX = true; 
@@ -84,11 +115,17 @@ public class Movement : MonoBehaviour
         interacting = !interacting;
     }
 
-    private void Jump()
+    public void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, jump_height);  
-        grounded = false;
+        if (Time.time >= nextjumpTime)
+        {
+                body.velocity = new Vector2(body.velocity.x, jump_height);
+                grounded = false;
+                nextjumpTime = Time.time + 6f / jumpRate;
+        }
+
     }
+    
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")

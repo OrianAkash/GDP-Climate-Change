@@ -16,6 +16,9 @@ public class Win : MonoBehaviour
     public TextMeshProUGUI displayScore;
     public TextMeshProUGUI correctScore;
     public TextMeshProUGUI wrongScore;
+    public GameObject Left;
+    public GameObject Right;
+    public GameObject Jump;
 
     void Start()
     {
@@ -29,6 +32,9 @@ public class Win : MonoBehaviour
         if (totalCollect == 7 && health.currentHealth > 0)
         {
             winningScreen.SetActive(true);
+            Jump.SetActive(false);
+            Right.SetActive(false);
+            Left.SetActive(false);
         }
 
         displayScore.text = "Score "+ (collect.collectCorrect*15);
