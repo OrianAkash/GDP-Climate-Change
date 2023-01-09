@@ -8,6 +8,7 @@ public class MetalBin : MonoBehaviour
     public Movement trashtype = new Movement();
     public int itemValue = 1;
     [SerializeField] private DialougeManager dialougeManager;
+    [SerializeField] private Movement movement;
     public bool triggered;
     public GameObject[] pestBox;
     private void OnTriggerEnter2D(Collider2D other)
