@@ -25,6 +25,7 @@ public class DialougeManager : MonoBehaviour
 
     public void TriggerStartDialouge()
     {
+        movement.enabled = false;
         StartCoroutine(StartDialouge());
     }
 
@@ -65,7 +66,7 @@ public class DialougeManager : MonoBehaviour
     public void TriggerContinueNPCDialouge()
     {
         continueButton.SetActive(false);
-
+        movement.enabled = true;
         if(npcIndex >= npcDialougeSentences.Length - 1)
         {
             npcDialougeText.text = string.Empty;
