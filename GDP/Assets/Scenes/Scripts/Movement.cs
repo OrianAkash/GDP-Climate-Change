@@ -6,6 +6,7 @@ using TMPro;
 
 public class Movement : MonoBehaviour
 {
+    public AudioSource collectsound;
     public float speed;
     public float jump_height;
     private Rigidbody2D body;
@@ -136,6 +137,7 @@ public class Movement : MonoBehaviour
     {
         if (inventryfill == false && other.gameObject.CompareTag("Plastic"))
         {
+            collectsound.Play();
             inventryfill = true;
             inventory = other.transform.tag;
             inventext.text = inventory;
@@ -143,6 +145,7 @@ public class Movement : MonoBehaviour
         }
         if (inventryfill == false && other.gameObject.CompareTag("Metal"))
         {
+            collectsound.Play();
             inventryfill = true;
             inventory = other.transform.tag;
             inventext.text = inventory;
@@ -150,6 +153,7 @@ public class Movement : MonoBehaviour
         }
         if (inventryfill == false && other.gameObject.CompareTag("Paper"))
         {
+            collectsound.Play();
             inventryfill = true;
             inventory = other.transform.tag;
             inventext.text = inventory;

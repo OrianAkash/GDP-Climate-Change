@@ -5,6 +5,7 @@ using TMPro;
 
 public class DialougeManager : MonoBehaviour
 {
+    public AudioSource clicksound;
     [SerializeField] private float typingSpeed = 0.008f;
 
     [SerializeField] private TextMeshProUGUI npcDialougeText;
@@ -65,6 +66,7 @@ public class DialougeManager : MonoBehaviour
 
     public void TriggerContinueNPCDialouge()
     {
+        clicksound.Play();
         continueButton.SetActive(false);
         movement.enabled = true;
         if(npcIndex >= npcDialougeSentences.Length - 1)

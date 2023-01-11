@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    public AudioSource damage;
     [SerializeField] private float startingHealth;
     public float currentHealth;
     // Start is called before the first frame update
@@ -15,10 +16,11 @@ public class Health : MonoBehaviour
 
     public void TakeDamage (float _damage)
     {
+
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
         if(currentHealth >0)
         {
-
+            damage.Play();
         }
         else if(currentHealth <=0)
         {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlasticBin : MonoBehaviour
 {
+    public AudioSource correctThrow;
     public Health healthbar;
     public Movement trashtype = new Movement();
     public int itemValue = 1;
@@ -16,6 +17,7 @@ public class PlasticBin : MonoBehaviour
         {
             if(trashtype.inventory == "Plastic")
             {
+                correctThrow.Play();
                 Debug.Log("Correct");
                 trashtype.inventory = null;
                 trashtype.inventext.text = null;

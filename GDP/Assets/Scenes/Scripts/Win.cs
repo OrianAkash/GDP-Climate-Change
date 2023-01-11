@@ -5,6 +5,10 @@ using TMPro;
 
 public class Win : MonoBehaviour
 {
+    public AudioSource theme;
+    public AudioSource wingame;
+    public AudioSource correctanswersound;
+    public AudioSource wronganswersound;
     public static Win instance;
     //public List<GameObject> objectsToRemove;
     public GameObject winningScreen;
@@ -31,6 +35,8 @@ public class Win : MonoBehaviour
     {
         if (totalCollect == 7 && health.currentHealth > 0)
         {
+            theme.Stop();
+            //wingame.Play();
             winningScreen.SetActive(true);
             Jump.SetActive(false);
             Right.SetActive(false);
@@ -46,6 +52,7 @@ public class Win : MonoBehaviour
 
     public void CorrectAnswer()
     {
+        correctanswersound.Play();
         winningScreen.SetActive(false);
         correctScore.text = "Score "+(collect.collectCorrect * 15) * 2;
         correctScreen.SetActive(true);
@@ -53,6 +60,7 @@ public class Win : MonoBehaviour
 
     public void WrongAnswer()
     {
+        wronganswersound.Play();
         winningScreen.SetActive(false);
         wrongScore.text = "Score " + (collect.collectCorrect*15);
         wrongScreen.SetActive(true);

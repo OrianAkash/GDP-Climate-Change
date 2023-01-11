@@ -5,16 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Scene_Man : MonoBehaviour
 {
+    public AudioSource collecteffect;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Retry()
@@ -22,8 +23,12 @@ public class Scene_Man : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void LevelSelect()
+    public void ClickEffectPlay()
     {
+        collecteffect.Play();
+    }
+    public void LevelSelect()
+    {      
         SceneManager.LoadScene(2);
     }
 }
