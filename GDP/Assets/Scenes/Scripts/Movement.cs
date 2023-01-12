@@ -7,6 +7,7 @@ using TMPro;
 public class Movement : MonoBehaviour
 {
     public AudioSource collectsound;
+    public AudioSource dashsound;
     public float speed;
     public float jump_height;
     private Rigidbody2D body;
@@ -27,7 +28,7 @@ public class Movement : MonoBehaviour
     private bool isDashing;
     public float dashingPower = 24f;
     private float dashingTime = 0.2f;
-    private float dashingCooldown = 1f;
+    public float dashingCooldown = 5f;
     public TrailRenderer tr;
 
     public bool facingright;
@@ -52,7 +53,7 @@ public class Movement : MonoBehaviour
 
     
 
-    private IEnumerator Dash()
+    public IEnumerator Dash()
     {
         canDash = false;
         isDashing = true;
@@ -60,6 +61,7 @@ public class Movement : MonoBehaviour
         body.gravityScale = 0f;
         if (facingright==true)
         {
+            
             body.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         }
 
@@ -181,6 +183,21 @@ public class Movement : MonoBehaviour
         }
 
     }
+
+    public void dashMove()
+    {
+        if (isDashing)
+        {
+            return;
+        }
+        if (canDash)
+        {
+            dashsound.Play();
+            StartCoroutine(Dash());
+        }
+        
+    }
+
     
     public void OnCollisionEnter2D(Collision2D collision)
     {
