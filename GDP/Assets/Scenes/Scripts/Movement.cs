@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
     public float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
+    public TrailRenderer tr;
 
     public bool facingright;
 
@@ -67,8 +68,9 @@ public class Movement : MonoBehaviour
             body.velocity = new Vector2(transform.localScale.x * -dashingPower, 0f);
         }
 
-
+        tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
         body.gravityScale = 2f;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
