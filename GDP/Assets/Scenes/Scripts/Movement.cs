@@ -23,6 +23,15 @@ public class Movement : MonoBehaviour
     private SpriteRenderer sprite;
     int itemValue = 1;
 
+    public bool canDash = true;
+    private bool isDashing;
+    public float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+
+    public bool facingright;
+
+
     private bool moveLeft;
     private bool moveRight;
     private float horizontalMove;
@@ -37,11 +46,39 @@ public class Movement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         moveLeft = false;
         moveRight = false;
+        facingright = true;
+    }
+
+    
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = body.gravityScale;
+        body.gravityScale = 0f;
+        if (facingright==true)
+        {
+            body.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        }
+
+        if (facingright==false)
+        {
+            body.velocity = new Vector2(transform.localScale.x * -dashingPower, 0f);
+        }
+
+
+        yield return new WaitForSeconds(dashingTime);
+        body.gravityScale = 2f;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 
     public void PointerDownLeft()
     {
         moveLeft = true;
+        facingright = false;
     }
 
     public void PointerUpLeft()
@@ -52,6 +89,7 @@ public class Movement : MonoBehaviour
     public void PointerDownRight()
     {
         moveRight = true;
+        facingright = true;
     }
 
     public void PointerUpRight()
@@ -60,11 +98,21 @@ public class Movement : MonoBehaviour
     }
     private void Update()
     {
+        if(isDashing)
+        {
+            return;
+        }
+
         if (!interacting)
         {
             MovePlayer();
         }
         UpdateAnim();
+
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
     }
     private void MovePlayer()
     {
@@ -83,6 +131,11 @@ public class Movement : MonoBehaviour
     }
     public void FixedUpdate()
     {
+        if (isDashing)
+        {
+            return;
+        }
+
         body.velocity = new Vector2(horizontalMove, body.velocity.y);
     }
 

@@ -3305,6 +3305,9 @@ MonoBehaviour:
   inventory: 
   inventext: {fileID: 1658044201}
   playerAnim: {fileID: 467245852}
+  canDash: 1
+  dashingPower: 3
+  facingright: 0
 --- !u!50 &467245855
 Rigidbody2D:
   serializedVersion: 4
