@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
     int itemValue = 1;
 
     public bool canDash = true;
-    private bool isDashing;
+    public bool isDashing;
     public float dashingPower = 24f;
     private float dashingTime = 0.2f;
     public float dashingCooldown = 5f;
