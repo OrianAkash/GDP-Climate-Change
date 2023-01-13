@@ -22,6 +22,10 @@ public class Scene_Man : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void Retry2()
+    {
+        SceneManager.LoadScene(4);
+    }
 
     public void ClickEffectPlay()
     {

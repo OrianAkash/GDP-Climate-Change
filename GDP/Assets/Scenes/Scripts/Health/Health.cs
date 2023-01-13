@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
         }
         else if(currentHealth <=0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
         }
     }
     // Update is called once per frame
