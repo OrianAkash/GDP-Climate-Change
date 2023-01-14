@@ -231,8 +231,12 @@ public class Movement : MonoBehaviour
             inventext.text = inventory;
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("Seed"))
+        if (inventryfill == false && other.gameObject.CompareTag("Seed"))
         {
+            inventryfill = true;
+            inventory = other.transform.tag;
+            inventext.text = inventory;
+            collectsound.Play();
             Destroy(other.gameObject);
             plantArea[Random.Range(0, plantArea.Length)].SetActive(true);
         }

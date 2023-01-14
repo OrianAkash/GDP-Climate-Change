@@ -26,6 +26,7 @@ public class DialougeManager : MonoBehaviour
 
     public void TriggerStartDialouge()
     {
+        Debug.Log("Convo");
         movement.enabled = false;
         StartCoroutine(StartDialouge());
     }

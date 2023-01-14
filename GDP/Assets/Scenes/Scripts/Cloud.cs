@@ -8,9 +8,6 @@ public class Cloud : MonoBehaviour
     public float speed = 1;
     private bool movingRight = true;
     public float xBoundary = 8;
-    public GameObject rainDrops;
-    public float spawnInterval = 0.1f;
-    public float timeSinceLastSpawn;
 
     void Update()
     {
