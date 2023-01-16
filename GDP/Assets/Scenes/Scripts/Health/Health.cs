@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     public AudioSource damage;
     [SerializeField] private float startingHealth;
     public float currentHealth;
+    public GameObject cameraTag;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -24,7 +25,15 @@ public class Health : MonoBehaviour
         }
         else if(currentHealth <=0)
         {
-            SceneManager.LoadScene(3);
+            if(cameraTag.tag == "level 1")
+            {
+                SceneManager.LoadScene(1);
+            }
+            else if (cameraTag.tag == "level2")
+            {
+                SceneManager.LoadScene(3);
+            }
+            
         }
     }
     // Update is called once per frame

@@ -11952,7 +11952,7 @@ GameObject:
   - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: level 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21250,6 +21250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectsound: {fileID: 1085838082}
+  dashsound: {fileID: 0}
   speed: 6
   jump_height: 13
   jumpRate: 5
@@ -21259,6 +21260,12 @@ MonoBehaviour:
   inventory: 
   inventext: {fileID: 1483664552}
   playerAnim: {fileID: 1085838078}
+  canDash: 1
+  isDashing: 0
+  dashingPower: 24
+  dashingCooldown: 5
+  tr: {fileID: 0}
+  facingright: 0
 --- !u!61 &1085838077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21320,6 +21327,7 @@ MonoBehaviour:
   damage: {fileID: 1085838083}
   startingHealth: 4
   currentHealth: 0
+  cameraTag: {fileID: 519420028}
 --- !u!82 &1085838080
 AudioSource:
   m_ObjectHideFlags: 0

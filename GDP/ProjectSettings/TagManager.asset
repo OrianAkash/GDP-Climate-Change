@@ -16,6 +16,7 @@ TagManager:
   - trash2
   - trash3
   - level2
+  - level 1
   layers:
   - Default
   - TransparentFX
