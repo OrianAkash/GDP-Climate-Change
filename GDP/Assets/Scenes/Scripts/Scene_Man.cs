@@ -35,4 +35,9 @@ public class Scene_Man : MonoBehaviour
     {      
         SceneManager.LoadScene(2);
     }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene(4);
+    }
 }
