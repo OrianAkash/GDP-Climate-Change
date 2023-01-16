@@ -17,7 +17,9 @@ public class Movement : MonoBehaviour
     public bool grounded;
     private bool interacting;
     public bool inventryfill = false;
-    public GameObject[] plantArea = new GameObject[3];
+    public GameObject plantArea1;
+    public GameObject plantArea2;
+    public GameObject plantArea3;
     public string inventory;
     public TextMeshProUGUI inventext;
     public Animator playerAnim;
@@ -33,11 +35,13 @@ public class Movement : MonoBehaviour
 
     public bool facingright;
 
-
     private bool moveLeft;
     private bool moveRight;
     private float horizontalMove;
 
+    public GameObject Npc1;
+    public GameObject Npc2;
+    public GameObject Npc3;
 
     private enum MoveState {idle, running, jumping };
     private void Awake()
@@ -231,14 +235,38 @@ public class Movement : MonoBehaviour
             inventext.text = inventory;
             Destroy(other.gameObject);
         }
-        if (inventryfill == false && other.gameObject.CompareTag("Seed"))
+        if (inventryfill == false && other.gameObject.CompareTag("Seed 1"))
         {
             inventryfill = true;
             inventory = other.transform.tag;
             inventext.text = inventory;
             collectsound.Play();
             Destroy(other.gameObject);
-            plantArea[Random.Range(0, plantArea.Length)].SetActive(true);
+            plantArea1.SetActive(true);
+            Npc1.SetActive(false);
+            Npc2.SetActive(true);
+
+        }
+        if (inventryfill == false && other.gameObject.CompareTag("Seed 2"))
+        {
+            inventryfill = true;
+            inventory = other.transform.tag;
+            inventext.text = inventory;
+            collectsound.Play();
+            Destroy(other.gameObject);
+            plantArea2.SetActive(true);
+            Npc2.SetActive(false);
+            Npc3.SetActive(true);
+        }
+        if (inventryfill == false && other.gameObject.CompareTag("Seed 3"))
+        {
+            inventryfill = true;
+            inventory = other.transform.tag;
+            inventext.text = inventory;
+            collectsound.Play();
+            Destroy(other.gameObject);
+            plantArea3.SetActive(true);
+            Npc3.SetActive(false);
         }
         if (other.gameObject.CompareTag("PlantArea"))
         {

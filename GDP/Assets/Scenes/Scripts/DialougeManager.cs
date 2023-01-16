@@ -67,6 +67,7 @@ public class DialougeManager : MonoBehaviour
 
     public void TriggerContinueNPCDialouge()
     {
+        Debug.Log("...");
         clicksound.Play();
         continueButton.SetActive(false);
         movement.enabled = true;

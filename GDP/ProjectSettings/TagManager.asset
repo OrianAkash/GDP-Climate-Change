@@ -7,7 +7,6 @@ TagManager:
   - Ground
   - StartTimer
   - StopTimer
-  - Seed
   - PlantArea
   - Plastic
   - Paper
@@ -17,6 +16,9 @@ TagManager:
   - trash3
   - level2
   - level 1
+  - Seed 1
+  - Seed 3
+  - Seed 2
   layers:
   - Default
   - TransparentFX

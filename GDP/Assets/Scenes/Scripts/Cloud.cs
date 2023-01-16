@@ -5,26 +5,21 @@ using UnityEngine;
 
 public class Cloud : MonoBehaviour
 {
-    public float speed = 1;
-    private bool movingRight = true;
-    public float xBoundary = 8;
+    public float amplitude = 0.2f;
+    public float frequency = 1f;
+    Vector3 posOrigin = new Vector3();
+    Vector3 tempPos = new Vector3();
 
+    void Start()
+    {
+        posOrigin = transform.position;
+    }
+
+    // Update is called once per frame
     void Update()
     {
-        // Move the cloud
-        if (movingRight)
-            transform.position += Vector3.right * speed * Time.deltaTime;
-        else
-            transform.position += Vector3.left * speed * Time.deltaTime;
-
-        // Check if the cloud has reached the edge of the screen
-        if (transform.position.x >= xBoundary)
-        {
-            movingRight = false;
-        }
-        else if (transform.position.x <= -xBoundary)
-        {
-            movingRight = true;
-        }
+        tempPos = posOrigin;
+        tempPos.x += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+        transform.position = tempPos;
     }
 }

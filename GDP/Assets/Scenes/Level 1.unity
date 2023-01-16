@@ -21256,7 +21256,9 @@ MonoBehaviour:
   jumpRate: 5
   grounded: 0
   inventryfill: 0
-  plantArea: []
+  plantArea1: {fileID: 0}
+  plantArea2: {fileID: 0}
+  plantArea3: {fileID: 0}
   inventory: 
   inventext: {fileID: 1483664552}
   playerAnim: {fileID: 1085838078}
