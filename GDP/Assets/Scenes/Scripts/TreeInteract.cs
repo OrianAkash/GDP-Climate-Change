@@ -12,14 +12,15 @@ public class TreeInteract : CollidableObjects
     private bool triggered;
     protected override void OnCollided(GameObject collidedObject)
     {
-        
-        if (collidedObject.CompareTag("Player") && !triggered)
-          {
-            OnInteract();
-            dialougeManager.TriggerStartDialouge();
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if (collidedObject.CompareTag("Player") && !triggered)
+            {
+                OnInteract();
+                dialougeManager.TriggerStartDialouge();
                 triggered = true;
             }
-        
+        }    
     }
 
     private void OnInteract()
