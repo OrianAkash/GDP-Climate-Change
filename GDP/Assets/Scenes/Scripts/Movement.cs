@@ -89,22 +89,35 @@ public class Movement : MonoBehaviour
     {
         moveLeft = true;
         facingright = false;
+        if (movesound.enabled == false)
+        {
+            movesound.enabled = true;
+            movesound.Play();
+        }
+        
     }
 
     public void PointerUpLeft()
     {
         moveLeft = false;
+        movesound.enabled = false;
     }
 
     public void PointerDownRight()
     {
         moveRight = true;
         facingright = true;
+        if (movesound.enabled == false)
+        {
+            movesound.enabled = true;
+            movesound.Play();
+        }
     }
 
     public void PointerUpRight()
     {
         moveRight = false;
+        movesound.enabled = false;
     }
     private void Update()
     {
@@ -129,6 +142,7 @@ public class Movement : MonoBehaviour
         if (moveLeft)
         {
             horizontalMove = -speed;
+
         }
         else if (moveRight)
         {
@@ -183,10 +197,11 @@ public class Movement : MonoBehaviour
     {
         if (Time.time >= nextjumpTime)
         {
+                
                 body.velocity = new Vector2(body.velocity.x, jump_height);
                 grounded = false;
                 nextjumpTime = Time.time + 6f / jumpRate;
-                              
+                jumpsound.Play();         
         }
 
 
