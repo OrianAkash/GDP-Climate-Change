@@ -6,21 +6,46 @@ public class TreeInteract : CollidableObjects
 {
     public bool Interacted = false;
     public GameObject seeds;
+    public GameObject btnSeed;
     public Vector3 newPosition;
     public Quaternion newRotation;
     [SerializeField] private DialougeManager dialougeManager;
     private bool triggered;
-    protected override void OnCollided(GameObject collidedObject)
+
+    //protected override void OnCollided(GameObject collidedObject)
+    //{
+    //    btnSeed.SetActive(true);
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        if (collidedObject.CompareTag("Player") && !triggered)
+    //        {
+    //            OnInteract();
+    //            dialougeManager.TriggerStartDialouge();
+    //            triggered = true;
+    //        }
+    //    }    
+    //}
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        btnSeed.SetActive(true);
+        if (collision.gameObject.CompareTag("Player") && !triggered)
         {
-            if (collidedObject.CompareTag("Player") && !triggered)
-            {
-                OnInteract();
-                dialougeManager.TriggerStartDialouge();
-                triggered = true;
-            }
-        }    
+            //OnInteract();
+            //dialougeManager.TriggerStartDialouge();
+            //triggered = true;
+        }
+    }
+
+    public void ClickFunction()
+    {
+        OnInteract();
+        dialougeManager.TriggerStartDialouge();
+        triggered = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        btnSeed.SetActive(false);
     }
 
     private void OnInteract()
