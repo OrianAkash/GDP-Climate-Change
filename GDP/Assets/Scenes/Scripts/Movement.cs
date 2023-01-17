@@ -8,6 +8,8 @@ public class Movement : MonoBehaviour
 {
     public AudioSource collectsound;
     public AudioSource dashsound;
+    public AudioSource movesound;
+    public AudioSource jumpsound;
     public float speed;
     public float jump_height;
     private Rigidbody2D body;
@@ -184,7 +186,11 @@ public class Movement : MonoBehaviour
                 body.velocity = new Vector2(body.velocity.x, jump_height);
                 grounded = false;
                 nextjumpTime = Time.time + 6f / jumpRate;
+                              
         }
+
+
+
 
     }
 
