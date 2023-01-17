@@ -7,11 +7,18 @@ TagManager:
   - Ground
   - StartTimer
   - StopTimer
-  - Seed
   - PlantArea
   - Plastic
   - Paper
   - Metal
+  - trash1
+  - trash2
+  - trash3
+  - level2
+  - level 1
+  - Seed 1
+  - Seed 3
+  - Seed 2
   layers:
   - Default
   - TransparentFX
@@ -20,8 +27,8 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
+  - Ground
+  - Rat
   - 
   - 
   - 
