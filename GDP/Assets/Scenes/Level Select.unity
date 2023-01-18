@@ -277,7 +277,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 426405480}
         m_TargetAssemblyTypeName: Scene_Man, Assembly-CSharp
-        m_MethodName: Retry
+        m_MethodName: cutscenelevel1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,123 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 
 public class FollowPlayer : MonoBehaviour
 {
-    [Header("Pathfinding")]
-    public Transform target;
-    public float activateDistance = 50f;
-    public float pathUpdateSeconds = 0.5f;
+    public GameObject pointA;
+    public GameObject pointB;
+    public float patrolSpeed = 1.0f;
+    public float chaseSpeed = 3.0f;
+    public float chaseRadius = 5.0f;
+    public GameObject player;
 
-    [Header("Physics")]
-    public float speed = 200f;
-    public float nextWaypointDistance = 3f;
-    public float jumpNodeHeightRequirement = 0.8f;
-    public float jumpModifier = 0.3f;
-    public float jumpCheckOffset = 0.1f;
+    private bool isPatrolling = true;
+    private bool isGoingToA = true;
 
-    [Header("Custom Behavior")]
-    public bool followEnabled = true;
-    public bool jumpEnabled = true;
-    public bool directionLookEnabled = true;
-
-    private Path path;
-    private int currentWaypoint = 0;
-    RaycastHit2D isGrounded;
-    Seeker seeker;
-    Rigidbody2D rb;
-
-    public void Start()
+    void Update()
     {
-        seeker = GetComponent<Seeker>();
-        rb = GetComponent<Rigidbody2D>();
-
-        InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
-    }
-
-    private void FixedUpdate()
-    {
-        if (TargetInDistance() && followEnabled)
+        if (isPatrolling)
         {
-            PathFollow();
+            Patrol();
+        }
+        else
+        {
+            Chase();
         }
     }
 
-    private void UpdatePath()
+    void Patrol()
     {
-        if (followEnabled && TargetInDistance() && seeker.IsDone())
+        if (isGoingToA)
         {
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
-        }
-    }
-
-    private void PathFollow()
-    {
-        if (path == null)
-        {
-            return;
-        }
-
-        // Reached end of path
-        if (currentWaypoint >= path.vectorPath.Count)
-        {
-            return;
-        }
-
-        // See if colliding with anything
-        Vector3 startOffset = transform.position - new Vector3(0f, GetComponent<Collider2D>().bounds.extents.y + jumpCheckOffset);
-        isGrounded = Physics2D.Raycast(startOffset, -Vector3.up, 0.05f);
-
-        // Direction Calculation
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-
-        // Jump
-        if (jumpEnabled && isGrounded)
-        {
-            if (direction.y > jumpNodeHeightRequirement)
+            transform.position = Vector2.MoveTowards(transform.position, pointA.transform.position, patrolSpeed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, pointA.transform.position) < 0.1f)
             {
-                rb.AddForce(Vector2.up * speed * jumpModifier);
+                isGoingToA = false;
             }
         }
-
-        // Movement
-        rb.AddForce(force);
-
-        // Next Waypoint
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-        if (distance < nextWaypointDistance)
+        else
         {
-            currentWaypoint++;
-        }
-
-        // Direction Graphics Handling
-        if (directionLookEnabled)
-        {
-            if (rb.velocity.x > 0.05f)
+            transform.position = Vector2.MoveTowards(transform.position, pointB.transform.position, patrolSpeed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, pointB.transform.position) < 0.1f)
             {
-                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            else if (rb.velocity.x < -0.05f)
-            {
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                isGoingToA = true;
             }
         }
     }
 
-    private bool TargetInDistance()
+    void Chase()
     {
-        return Vector2.Distance(transform.position, target.transform.position) < activateDistance;
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, chaseSpeed * Time.deltaTime);
     }
 
-    private void OnPathComplete(Path p)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (!p.error)
+        if (other.CompareTag("Player"))
         {
-            path = p;
-            currentWaypoint = 0;
+            if (Vector2.Distance(transform.position, other.transform.position) < chaseRadius)
+            {
+                isPatrolling = false;
+            }
         }
     }
-    
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPatrolling = true;
+        }
+    }
 }
