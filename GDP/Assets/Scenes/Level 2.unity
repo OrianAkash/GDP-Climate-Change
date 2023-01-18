@@ -8694,7 +8694,7 @@ MonoBehaviour:
   playerAnim: {fileID: 467245852}
   canDash: 1
   isDashing: 0
-  dashingPower: 5
+  dashingPower: 4
   dashingCooldown: 1.5
   tr: {fileID: 467245861}
   facingright: 0
@@ -46426,7 +46426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d6905a8ef53254694a1f62e39cad98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tree: {fileID: 0}
+  tree: {fileID: 1289340083}
   movement: {fileID: 467245854}
 --- !u!1 &1768441342
 GameObject:
