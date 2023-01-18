@@ -44,4 +44,8 @@ public class Scene_Man : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
+    public void cutscenelevel2()
+    {
+        SceneManager.LoadScene(6);
+    }
 }

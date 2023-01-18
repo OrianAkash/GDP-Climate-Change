@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeInteract : CollidableObjects
+public class TreeInteract : MonoBehaviour
 {
     public bool Interacted = false;
     public GameObject seeds;
@@ -41,6 +41,7 @@ public class TreeInteract : CollidableObjects
         OnInteract();
         dialougeManager.TriggerStartDialouge();
         triggered = true;
+        btnSeed.SetActive(false);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
