@@ -366,18 +366,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15823688}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 854676435}
-  m_RootOrder: 18
+  m_Father: {fileID: 1186288771}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -788, y: 335.2}
-  m_SizeDelta: {x: -1720, y: -1030}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 215.085, y: 88.109924}
+  m_SizeDelta: {x: 200, y: -134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15823690
 MonoBehaviour:
@@ -7052,7 +7052,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -7209,7 +7209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286386638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.026708, y: 2.805263, z: -10}
+  m_LocalPosition: {x: -12.026706, y: 2.8053021, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7718,7 +7718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 134, y: 221}
+  m_AnchoredPosition: {x: 162, y: 279}
   m_SizeDelta: {x: 99.34302, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &350035072
@@ -7983,7 +7983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &363943269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22290,7 +22290,6 @@ RectTransform:
   - {fileID: 350035071}
   - {fileID: 484261662}
   - {fileID: 1186288771}
-  - {fileID: 15823689}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27562,6 +27561,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 5, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 16
+      m_TileSpriteIndex: 16
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 16, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -28796,7 +28805,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: fa81aa196de90eb438bddb9b08a3ff49, type: 2}
   - m_RefCount: 27
     m_Data: {fileID: 11400000, guid: 2e947413d8250534093f48a3aa29cacd, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 23de78d8473898c48ae935fc211f70a3, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: ebf41da40c1bab041ad9951e71aa27bc, type: 2}
@@ -28919,7 +28928,7 @@ Tilemap:
     m_Data: {fileID: -9164348248706466934, guid: 157cbc340d2b7e64ab85168e80e95550, type: 3}
   - m_RefCount: 27
     m_Data: {fileID: -6911323858483072790, guid: 157cbc340d2b7e64ab85168e80e95550, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 2587240053332743978, guid: 157cbc340d2b7e64ab85168e80e95550, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 806825461475872667, guid: 157cbc340d2b7e64ab85168e80e95550, type: 3}
@@ -29010,7 +29019,7 @@ Tilemap:
   - m_RefCount: 4
     m_Data: {fileID: -7201348720258070934, guid: 157cbc340d2b7e64ab85168e80e95550, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 464
+  - m_RefCount: 465
     m_Data:
       e00: 1
       e01: 0
@@ -29029,7 +29038,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 464
+  - m_RefCount: 465
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -29515,6 +29524,26 @@ CompositeCollider2D:
         Y: 20000000
       - X: 240000000
         Y: 20000000
+    - - X: 49999900
+        Y: 20000041
+      - X: 49999900
+        Y: 9999959
+      - X: 49999959
+        Y: 9999900
+      - X: 60000041
+        Y: 9999900
+      - X: 60000100
+        Y: 9999959
+      - X: 60000100
+        Y: 19999900
+      - X: 50937492
+        Y: 19999900
+      - X: 50937476
+        Y: 19999903
+      - X: 50936885
+        Y: 20000100
+      - X: 49999959
+        Y: 20000100
     - - X: -22812500
         Y: 11250000
       - X: -20000000
@@ -29627,22 +29656,10 @@ CompositeCollider2D:
       - {x: -16, y: 10.9687395}
       - {x: -15.999999, y: 9.218745}
       - {x: -15.906232, y: 9}
-    - - {x: 2.999971, y: 9}
-      - {x: 2.999971, y: 10}
-      - {x: 0.0312424, y: 9.999992}
-      - {x: 0, y: 9.9687395}
-      - {x: 0.0000076, y: 9.031241}
-      - {x: 0.0312608, y: 9}
     - - {x: 18.999971, y: 9}
       - {x: 18.999971, y: 10}
       - {x: 18, y: 9.99997}
       - {x: 18.000029, y: 9}
-    - - {x: 9.937484, y: 9}
-      - {x: 10, y: 9.125006}
-      - {x: 9.99997, y: 10}
-      - {x: 8, y: 9.99997}
-      - {x: 8.000013, y: 9.124992}
-      - {x: 8.218757, y: 9}
     - - {x: 15.5624895, y: 9}
       - {x: 15.718752, y: 9.125002}
       - {x: 16, y: 9.4062605}
@@ -29651,6 +29668,18 @@ CompositeCollider2D:
       - {x: 14, y: 9.99997}
       - {x: 14.000019, y: 9.031243}
       - {x: 14.093756, y: 9}
+    - - {x: 9.937484, y: 9}
+      - {x: 10, y: 9.125006}
+      - {x: 9.99997, y: 10}
+      - {x: 8, y: 9.99997}
+      - {x: 8.000013, y: 9.124992}
+      - {x: 8.218757, y: 9}
+    - - {x: 2.999971, y: 9}
+      - {x: 2.999971, y: 10}
+      - {x: 0.0312424, y: 9.999992}
+      - {x: 0, y: 9.9687395}
+      - {x: 0.0000076, y: 9.031241}
+      - {x: 0.0312608, y: 9}
     - - {x: -26.000027, y: 7.9999905}
       - {x: -26.000027, y: 9.00001}
       - {x: -28.968761, y: 9.000001}
@@ -29732,6 +29761,13 @@ CompositeCollider2D:
       - {x: 18, y: 5.999971}
       - {x: 18.00002, y: 5.0312443}
       - {x: 18.093756, y: 5}
+    - - {x: 23.999971, y: 2}
+      - {x: 23.999971, y: 4}
+      - {x: 23, y: 3.999971}
+      - {x: 22.999971, y: 3}
+      - {x: 22, y: 2.999971}
+      - {x: 22.000013, y: 2.1249924}
+      - {x: 22.218758, y: 2}
     - - {x: 3.5624912, y: 3}
       - {x: 3.7187512, y: 3.1250012}
       - {x: 4, y: 3.4062607}
@@ -29740,13 +29776,14 @@ CompositeCollider2D:
       - {x: -1, y: 3.999971}
       - {x: -0.9999865, y: 3.1249924}
       - {x: -0.7812432, y: 3}
-    - - {x: 23.999971, y: 2}
-      - {x: 23.999971, y: 4}
-      - {x: 23, y: 3.999971}
-      - {x: 22.999971, y: 3}
-      - {x: 22, y: 2.999971}
-      - {x: 22.000013, y: 2.1249924}
-      - {x: 22.218758, y: 2}
+    - - {x: 5.9999747, y: 0.99999}
+      - {x: 5.999981, y: 1.99999}
+      - {x: 4.99999, y: 1.9999748}
+      - {x: 5.0000253, y: 0.99999}
+    - - {x: 16.999971, y: 1}
+      - {x: 16.999971, y: 2}
+      - {x: 16, y: 1.9999708}
+      - {x: 16.000029, y: 1}
     - - {x: -2.437509, y: 1}
       - {x: -2.2812488, y: 1.1250012}
       - {x: -2, y: 1.4062608}
@@ -29755,10 +29792,6 @@ CompositeCollider2D:
       - {x: -7, y: 1.9999708}
       - {x: -6.9999866, y: 1.1249924}
       - {x: -6.7812433, y: 1}
-    - - {x: 16.999971, y: 1}
-      - {x: 16.999971, y: 2}
-      - {x: 16, y: 1.9999708}
-      - {x: 16.000029, y: 1}
     - - {x: 20.937485, y: 0}
       - {x: 21, y: 0.1250059}
       - {x: 20.999971, y: 1}
@@ -30071,13 +30104,14 @@ RectTransform:
   m_Children:
   - {fileID: 589842388}
   - {fileID: 1031347888}
+  - {fileID: 15823689}
   m_Father: {fileID: 854676435}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -701.67, y: 341.98}
-  m_SizeDelta: {x: 412.17, y: 72.392}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 259, y: 351}
+  m_SizeDelta: {x: 412.17004, y: 72.392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1186288772
 MonoBehaviour:
@@ -31452,7 +31486,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -31548,7 +31582,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -31645,9 +31679,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 780c4a22be2b98c41a4387214e73fade, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.08
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -31740,7 +31774,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 881e3f52c86c94f26a60718d35627cd8, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -32539,7 +32573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -606, y: -371}
+  m_AnchoredPosition: {x: -508, y: -374}
   m_SizeDelta: {x: 120, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1500681899
