@@ -23,6 +23,9 @@ public class Win : MonoBehaviour
     public GameObject Left;
     public GameObject Right;
     public GameObject Jump;
+    public GameObject camera;
+    public GameObject dash;
+    public GameObject back;
 
     void Start()
     {
@@ -33,14 +36,32 @@ public class Win : MonoBehaviour
     }
     void Update()
     {
-        if (totalCollect == 7 && health.currentHealth > 0)
+        if (camera.tag == "level 1")
         {
-            theme.Stop();
-            //wingame.Play();
-            winningScreen.SetActive(true);
-            Jump.SetActive(false);
-            Right.SetActive(false);
-            Left.SetActive(false);
+            if (totalCollect == 7 && health.currentHealth > 0 )
+            {
+                theme.Stop();
+                //wingame.Play();
+                winningScreen.SetActive(true);
+                Jump.SetActive(false);
+                Right.SetActive(false);
+                Left.SetActive(false);
+                back.SetActive(false);
+            }
+        }
+        else if (camera.tag == "level2")
+        {
+            if (totalCollect == 3 && health.currentHealth > 0)
+            {
+                theme.Stop();
+                //wingame.Play();
+                winningScreen.SetActive(true);
+                Jump.SetActive(false);
+                Right.SetActive(false);
+                Left.SetActive(false);
+                dash.SetActive(false);
+                back.SetActive(false);
+            }
         }
 
         displayScore.text = "Score "+ (collect.collectCorrect*15);

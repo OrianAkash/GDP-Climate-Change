@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Scene_Man : MonoBehaviour
 {
+    public Animator transitionAnim;
     public AudioSource collecteffect;
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,8 @@ public class Scene_Man : MonoBehaviour
         collecteffect.Play();
     }
     public void LevelSelect()
-    {      
+    {
+        StartCoroutine(LoadScene());
         SceneManager.LoadScene(2);
     }
 
@@ -42,10 +44,22 @@ public class Scene_Man : MonoBehaviour
     }
     public void cutscenelevel1()
     {
+        StartCoroutine(StartScene());
         SceneManager.LoadScene(5);
     }
     public void cutscenelevel2()
     {
         SceneManager.LoadScene(6);
+    }
+
+    IEnumerator LoadScene()
+    {
+        transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(1.5f);
+    }
+    IEnumerator StartScene()
+    {
+        transitionAnim.SetTrigger("Start");
+        yield return new WaitForSeconds(0.5f);
     }
 }
