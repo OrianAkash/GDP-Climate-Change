@@ -12268,7 +12268,7 @@ MonoBehaviour:
   dash: {fileID: 0}
   back: {fileID: 324514567}
   airbar: {fileID: 0}
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 1085838071}
 --- !u!4 &454471903
 Transform:
   m_ObjectHideFlags: 0
