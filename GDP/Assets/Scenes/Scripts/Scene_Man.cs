@@ -20,11 +20,11 @@ public class Scene_Man : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void Retry2()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 
     public void ClickEffectPlay()
@@ -34,21 +34,21 @@ public class Scene_Man : MonoBehaviour
     public void LevelSelect()
     {
         StartCoroutine(LoadScene());
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void Level2()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
     public void cutscenelevel1()
     {
         StartCoroutine(StartScene());
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
     }
     public void cutscenelevel2()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(7);
     }
 
     IEnumerator LoadScene()
@@ -58,5 +58,10 @@ public class Scene_Man : MonoBehaviour
     IEnumerator StartScene()
     {
         yield return new WaitForSeconds(0.5f);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

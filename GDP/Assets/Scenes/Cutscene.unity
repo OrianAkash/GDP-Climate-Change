@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoading: 2
-  sceneNameToLoad: 0
+  sceneNameToLoad: 1
 --- !u!4 &182911574
 Transform:
   m_ObjectHideFlags: 0

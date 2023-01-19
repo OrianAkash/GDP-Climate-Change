@@ -27,11 +27,11 @@ public class Health : MonoBehaviour
         {
             if(cameraTag.tag == "level 1")
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
             else if (cameraTag.tag == "level2")
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(4);
             }
             
         }
