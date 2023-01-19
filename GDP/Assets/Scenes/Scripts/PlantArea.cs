@@ -6,6 +6,7 @@ public class PlantArea : MonoBehaviour
 {
     public GameObject tree;
     public Movement movement;
+    public AthmosphereBar air;
     public int itemValue = 1;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,6 +16,7 @@ public class PlantArea : MonoBehaviour
             Collected.instance.ChangeCollect(itemValue);
             Win.instance.TotalCollect(itemValue);
             movement.inventryfill = false;
+            air.replenishAir();
         }
     }
 }

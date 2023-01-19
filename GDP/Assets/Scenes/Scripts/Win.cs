@@ -26,6 +26,8 @@ public class Win : MonoBehaviour
     public GameObject camera;
     public GameObject dash;
     public GameObject back;
+    public GameObject airbar;
+    public GameObject healthbar;
 
     void Start()
     {
@@ -47,6 +49,7 @@ public class Win : MonoBehaviour
                 Right.SetActive(false);
                 Left.SetActive(false);
                 back.SetActive(false);
+                healthbar.SetActive(false);
             }
         }
         else if (camera.tag == "level2")
@@ -61,6 +64,8 @@ public class Win : MonoBehaviour
                 Left.SetActive(false);
                 dash.SetActive(false);
                 back.SetActive(false);
+                airbar.SetActive(false);
+                healthbar.SetActive(false);
             }
         }
 

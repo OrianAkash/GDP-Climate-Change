@@ -18,6 +18,8 @@ public class DialougeManager : MonoBehaviour
     private float speechBubbleAnimDelay = 0.6f;
 
     private Movement movement;
+    public BoxCollider2D boxCollider;
+    public PhysicsMaterial2D slipMaterial;
 
     private void Start()
     {
@@ -28,6 +30,7 @@ public class DialougeManager : MonoBehaviour
     {
         Debug.Log("Convo");
         movement.enabled = false;
+        boxCollider.sharedMaterial = null;
         StartCoroutine(StartDialouge());
     }
 
@@ -71,7 +74,8 @@ public class DialougeManager : MonoBehaviour
         clicksound.Play();
         continueButton.SetActive(false);
         movement.enabled = true;
-        if(npcIndex >= npcDialougeSentences.Length - 1)
+        boxCollider.sharedMaterial = slipMaterial;
+        if (npcIndex >= npcDialougeSentences.Length - 1)
         {
             npcDialougeText.text = string.Empty;
             npcSpeechBubbleAnimator.SetTrigger("Close");

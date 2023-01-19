@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Scene_Man : MonoBehaviour
 {
-    public Animator transitionAnim;
     public AudioSource collecteffect;
     // Start is called before the first frame update
     void Start()
@@ -54,12 +53,10 @@ public class Scene_Man : MonoBehaviour
 
     IEnumerator LoadScene()
     {
-        transitionAnim.SetTrigger("end");
         yield return new WaitForSeconds(1.5f);
     }
     IEnumerator StartScene()
     {
-        transitionAnim.SetTrigger("Start");
         yield return new WaitForSeconds(0.5f);
     }
 }
