@@ -41,6 +41,10 @@ public class Scene_Man : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
+    public void Level1()
+    {
+        SceneManager.LoadScene(1);
+    }
     public void cutscenelevel1()
     {
         StartCoroutine(StartScene());

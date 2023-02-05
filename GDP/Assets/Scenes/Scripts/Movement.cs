@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
     public float jumpRate = 2f;
     float nextjumpTime = 0f;
     public bool grounded;
-    private bool interacting;
+    [SerializeField] private bool interacting;
     public bool inventryfill = false;
     public GameObject plantArea1;
     public GameObject plantArea2;
@@ -26,6 +26,9 @@ public class Movement : MonoBehaviour
     public TextMeshProUGUI inventext;
     public Animator playerAnim;
     private SpriteRenderer sprite;
+    [SerializeField] private GameObject arrow1;
+    [SerializeField] private GameObject arrow2;
+    [SerializeField] private GameObject arrow3;
     int itemValue = 1;
 
     public bool canDash = true;
@@ -266,6 +269,7 @@ public class Movement : MonoBehaviour
             plantArea1.SetActive(true);
             Npc1.SetActive(false);
             Npc2.SetActive(true);
+            arrow1.SetActive(true);
 
         }
         if (inventryfill == false && other.gameObject.CompareTag("Seed 2"))
@@ -278,6 +282,7 @@ public class Movement : MonoBehaviour
             plantArea2.SetActive(true);
             Npc2.SetActive(false);
             Npc3.SetActive(true);
+            arrow2.SetActive(true);
         }
         if (inventryfill == false && other.gameObject.CompareTag("Seed 3"))
         {
@@ -288,6 +293,7 @@ public class Movement : MonoBehaviour
             Destroy(other.gameObject);
             plantArea3.SetActive(true);
             Npc3.SetActive(false);
+            arrow3.SetActive(true);
         }
         if (other.gameObject.CompareTag("PlantArea"))
         {

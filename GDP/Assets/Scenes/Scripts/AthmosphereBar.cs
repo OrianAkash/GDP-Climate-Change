@@ -22,7 +22,7 @@ public class AthmosphereBar : MonoBehaviour
 
         if(slider.value == 0)
         {
-            health.TakeDamage(1);
+            health.TakeDamage(0.5f);
             replenishAir();
         }
     }

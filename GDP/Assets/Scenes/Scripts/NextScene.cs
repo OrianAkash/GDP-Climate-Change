@@ -6,15 +6,14 @@ public class NextScene : MonoBehaviour
 {
     [SerializeField]
     private float delayBeforeLoading = 2f;
-    [SerializeField]
-    private int sceneNameToLoad;
     private float timeElapsed;
+    public GameObject nextButton;
     void Update()
     {
         timeElapsed += Time.deltaTime;
         if (timeElapsed > delayBeforeLoading)
         {
-            SceneManager.LoadScene(sceneNameToLoad);
+            nextButton.SetActive(true);
         }
     }
 }
