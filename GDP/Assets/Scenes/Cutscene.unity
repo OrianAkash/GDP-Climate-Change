@@ -348,7 +348,7 @@ RectTransform:
   m_GameObject: {fileID: 596205571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.5669}
+  m_LocalScale: {x: 0.56968004, y: 0.56968004, z: 0.807379}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 760760365}
@@ -942,7 +942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 61}
+  m_AnchoredPosition: {x: 8, y: 170}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056026738
@@ -965,8 +965,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Help collect all the trash and place them into the correct bin, place wrongly
-    and flies will spawn, damaging you
+  m_text: 'Help collect all the trash and place them into the correct bin, place
+    wrongly and flies will spawn, damaging you. Make sure to stay out of the storm!
+
+
+    Tip
+    : Use dash at right moment to prevent damage from storms and flies!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a83bc04a8c3dcb441b932c37fe55618e, type: 2}
   m_sharedMaterial: {fileID: -2591472491487304195, guid: a83bc04a8c3dcb441b932c37fe55618e, type: 2}
@@ -1029,7 +1033,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -46.361496, y: -19.36472, z: -43.3925, w: -25.353556}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1380,7 +1384,7 @@ RectTransform:
   m_GameObject: {fileID: 1983115262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.5669}
+  m_LocalScale: {x: 0.56968004, y: 0.56968004, z: 0.807379}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 760760365}
@@ -1532,7 +1536,7 @@ RectTransform:
   m_GameObject: {fileID: 2055134721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.5669}
+  m_LocalScale: {x: 0.56968004, y: 0.56968004, z: 0.807379}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 760760365}
