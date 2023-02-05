@@ -30,6 +30,7 @@ public class DialougeManager : MonoBehaviour
     {
         Debug.Log("Convo");
         movement.enabled = false;
+        movement.body.velocity = Vector2.zero;
         boxCollider.sharedMaterial = null;
         StartCoroutine(StartDialouge());
     }

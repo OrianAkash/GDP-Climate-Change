@@ -49,6 +49,7 @@ public class Win : MonoBehaviour
                 Right.SetActive(false);
                 Left.SetActive(false);
                 back.SetActive(false);
+                dash.SetActive(false);
                 healthbar.SetActive(false);
             }
         }

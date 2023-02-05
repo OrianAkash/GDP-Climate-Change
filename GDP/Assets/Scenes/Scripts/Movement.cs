@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     public AudioSource jumpsound;
     public float speed;
     public float jump_height;
-    private Rigidbody2D body;
+    public Rigidbody2D body;
     private float horizontalInput = 0f;
     public float jumpRate = 2f;
     float nextjumpTime = 0f;
