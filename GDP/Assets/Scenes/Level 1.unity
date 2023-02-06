@@ -11915,7 +11915,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 388566853}
         m_TargetAssemblyTypeName: Scene_Man, Assembly-CSharp
-        m_MethodName: Level2
+        m_MethodName: cutscenelevel2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13947,7 +13947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.316391, y: 0.8376771, z: -10}
+  m_LocalPosition: {x: -14.316433, y: 0.82022345, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
